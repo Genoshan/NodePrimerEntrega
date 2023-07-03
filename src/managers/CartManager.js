@@ -67,8 +67,7 @@ export default class CartManager {
 
     getCartsById = async (id) => {
         const carts = await this.getCarts(); // Esperar a que se resuelva la promesa
-        const numericId = parseInt(id); // Convertir el ID a número
-        console.log(numericId)
+        const numericId = parseInt(id); // Convertir el ID a número        
         return carts.find((product) => product.id === numericId);
     };
 

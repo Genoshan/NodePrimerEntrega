@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
 router.post('/:cid/products/:pid', async (req, res) => {
     const cid = req.params.cid;
     const pid = req.params.pid;
-    console.log(cid)
+    
     const result = await cartManager.saveProduct(cid, pid);    
     res.send({ status: "Success", result });
 });

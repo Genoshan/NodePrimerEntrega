@@ -79,7 +79,7 @@ router.delete('/:id', async (req, res) => {
 //Limit
 router.get('/', async (req, res)=>{
     let limit = req.query.limit    
-    console.log(limit)
+    
     const element = []    
     const products = await productManager.getProducts();
 

@@ -45,15 +45,15 @@ export default class ProductManager {
 
     getProductsById = async (id) => {
         const products = await this.getProducts(); // Esperar a que se resuelva la promesa
-        const numericId = parseInt(id); // Convertir el ID a número
-        console.log(numericId)
+        const numericId = parseInt(id); // Convertir el ID a número        
+
         return products.find((product) => product.id === numericId);
     };   
 
     async updateProduct(updatedProduct) {
         const currentProducts = await this.getProducts();
         const index = currentProducts.findIndex((product) => product.id == updatedProduct.id);
-      console.log(index)
+
         if (index !== -1) {
           const existingProduct = currentProducts[index];
       
